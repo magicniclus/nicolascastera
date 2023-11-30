@@ -7,10 +7,9 @@ import Analytics from './components/Analytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Trouver des Chantiers - Augmentez Votre CA | Trouver-Mon-Chantier.fr',
-  description: "Boostez votre CA avec Trouver-Mon-Chantier.fr. Solutions sur-mesure pour professionnels du bâtiment. Sans engagement ni frais cachés.",
+  title: 'Nicolas Castera - Expert Google Ads | Publicité et Marketing Digital',
+  description: "Boostez votre visibilité en ligne avec Nicolas Castera, votre expert en Google Ads. Découvrez des stratégies publicitaires personnalisées pour maximiser le ROI et accroître votre présence numérique efficacement.",
 }
-
 export default function RootLayout({
   children,
 }: {
