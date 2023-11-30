@@ -42,7 +42,7 @@ const Qui: React.FC = () => {
             <div className="mx-auto flex max-w-5xl p-6 lg:px-8 lg:pb-32 pb-20 md:flex-row flex-col justify-between items-center mt-16">
                 {
                     cards.map((card, index) => (
-                        <div className='md:w-4/12 w-full flex flex-col items-center md:max-w-[30%] min-h-[360px] p-7 text-white bg-textSecondary rounded-md md:mt-0 mt-7' key={index}>
+                        <div className='md:w-4/12 w-full flex flex-col items-center md:max-w-[30%] md:min-h-[360px] p-7 text-white bg-textSecondary rounded-md md:mt-0 mt-7' key={index}>
                             <h3 className='text-xl font-bold mt-4'>{card.title}</h3>
                             <p className='text-center mt-4'>{card.text}</p> 
                         </div>
