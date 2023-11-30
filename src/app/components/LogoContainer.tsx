@@ -1,5 +1,5 @@
 import React from 'react';
-import Logos from "./logos";
+import Logos from "./Logos";
 
 // Définir l'interface pour un élément de data
 interface DataItem {
