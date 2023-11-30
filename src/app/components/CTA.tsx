@@ -15,7 +15,7 @@ const CTA = () => {
                             <EnvelopeIcon className='h-6 w-6 mr-2' />
                             Formulaire de contact
                         </a>
-                        <a href="#" className='text-lg bg-text hover:bg-white hover:text-text rounded-lg p-4 flex mt-3 transition-all duration-100 ease-in-out'>
+                        <a href="https://calendly.com/nicolascastera-rdv/rendez-vous-decouverte" className='text-lg bg-text hover:bg-white hover:text-text rounded-lg p-4 flex mt-3 transition-all duration-100 ease-in-out'>
                             <ClockIcon className='h-6 w-6 mr-2' />
                             Planifier un appel de 30min
                         </a>
