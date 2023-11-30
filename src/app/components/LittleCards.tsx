@@ -7,7 +7,7 @@ interface LittleCardsProps {
 
 const LittleCards : React.FC<LittleCardsProps> = ({value}) => {
     return (
-        <div className='flex mt-5 p-3 rounded-full bg-gray/60 max-w-max min-w-[270px]'>
+        <div className='flex mt-5 p-3 rounded-full bg-gray/50 max-w-max min-w-[270px] border border-gray'>
             <CheckCircleIcon className='h-5 w-5 text-yellow' />
             <p className='ml-3'>{value}</p>
         </div>
