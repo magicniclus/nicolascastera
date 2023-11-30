@@ -25,7 +25,7 @@ const Hero = () => {
     });
 
     useEffect(() => {
-        setDisabled(!(value.name && value.email && value.tel && value.codePostal && value.nomEntreprise && value.commentaire));
+        setDisabled(!(value.name && value.email && value.tel && value.codePostal && value.nomEntreprise ));
     }, [value]);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -54,7 +54,7 @@ const Hero = () => {
                 </div>
                 <div className='md:w-6/12 w-full md:mt-0 mt-12'>
                     <form onSubmit={handleSubmit} id="form" className='sm:px-7 px-2 py-16 bg-gray rounded-md shadow-md flex flex-col items-center w-full'>
-                        <h2 className='text-center text-textSecondary text-4xl font-bold'>Nous contacter</h2>
+                        <h2 className='text-center text-textSecondary text-4xl font-bold'>Contact</h2>
                         <p className='text-center text-xs mt-5'>Laissez-nous un message, nous vous recontactons sous 24h.</p>
                         <p className='text-center text-xs mt-3'>Pour planifier directement un appel cliquez <a href="#" className='text-yellow underline text-base'>ici</a>.</p>
                         <div className='md:w-11/12 mx-auto mt-8'>
@@ -102,7 +102,7 @@ const Hero = () => {
                         />
                         <textarea
                             name="Commentaire"
-                            placeholder="Comment pujis-je vous aider ?"
+                            placeholder="Comment puis-je vous aider ?"
                             value={value.commentaire}
                             onChange={(e) => setValue({ ...value, commentaire: e.target.value })}
                             className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
