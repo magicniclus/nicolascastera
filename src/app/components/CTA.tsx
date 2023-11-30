@@ -4,7 +4,7 @@ import React from 'react';
 const CTA = () => {
     return (
         <section>
-            <div className='mx-auto flex max-w-5xl p-6 lg:px-8 lg:py-32 py-20 md:flex-row flex-col justify-between items-start md:items-center bg-white'>
+            <div className='mx-auto flex max-w-5xl p-6 lg:px-8 lg:pb-32 pb-20 md:flex-row flex-col justify-between items-start md:items-center bg-white'>
                 <div className='p-10 bg-textSecondary rounded-xl w-full text-white flex items-center justify-between md:flex-row flex-col'>
                     <div>
                         <h2 className='text-2xl font-bold'>Besoin d'un audit gratuit ?</h2>
