@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-6 pb-8  lg:px-8">
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
           <p className="mt-8 text-xs leading-5 text-gray-400 md:mt-0">
-            &copy; 2023 trouver-mon-chantier.com, Inc. Tous droit réservé.
+            &copy; 2023 nicolas-castera.fr, Inc. Tous droit réservé.
           </p>
           <div className="flex">
           <a
