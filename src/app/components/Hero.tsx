@@ -3,8 +3,16 @@ import React, { useState, useEffect, FormEvent } from 'react';
 import ButtonForm from './ButtonForm';
 import { addProspect } from '../firebase/dataManager';
 import { useRouter } from 'next/navigation'
+import LittleCards from './LittleCards';
 
 const Hero = () => {
+    const cardsValue = [
+        "Augmentez votre visibilité",
+        "Générez plus de leads",
+        "Obtenez plus de clients",
+        "Boostez votre CA"
+    ]
+
     const router = useRouter();
     const [disabled, setDisabled] = useState(true);
     const [value, setValue] = useState({
@@ -13,11 +21,11 @@ const Hero = () => {
         tel: '',
         codePostal: '',
         nomEntreprise: "",
-        metierPrincipal:""
+        commentaire:""
     });
 
     useEffect(() => {
-        setDisabled(!(value.name && value.email && value.tel && value.codePostal && value.nomEntreprise && value.metierPrincipal));
+        setDisabled(!(value.name && value.email && value.tel && value.codePostal && value.nomEntreprise && value.commentaire));
     }, [value]);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -33,17 +41,23 @@ const Hero = () => {
         <section >
             <div className='mx-auto flex max-w-5xl px-6 lg:pb-32 pb-20 pt-14 lg:px-8 md:flex-row flex-col justify-between items-center'>
                 <div className='md:w-5/12 w-full'>
-                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver <span className="underline-yellow">des Chantiers</span></h1>
-                    <p className='text-text text-xl mt-10 font-semibold'>Augmenter votre de CA mensuel de </p>
-                    <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-2xl text-textSecondary'>à</span><br/> 400 000€</h2>
+                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Votre <span className="underline-yellow">expert Google ads</span></h1>
+                    <p className='text-text text-xl mt-10 font-semibold'>Depuis <span className='text-2xl text-textSecondary'>2016 </span>je vous accompagne pour atteindre <span className='text-2xl text-textSecondary'>vos objectifs</span></p>
                     <p className='text-text text-xl font-semibold mt-2'>Efficace, fiable et continu</p>
-                    <p className='mt-10'>Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. </p>
+                    <div className='mt-10'>
+                    {
+                        cardsValue.map((card, index) => (
+                            <LittleCards key={index} value={card} />
+                        ))
+                    }
+                    </div>
                 </div>
                 <div className='md:w-6/12 w-full md:mt-0 mt-12'>
                     <form onSubmit={handleSubmit} id="form" className='sm:px-7 px-2 py-16 bg-gray rounded-md shadow-md flex flex-col items-center w-full'>
-                        <h2 className='text-center text-text text-xl font-semibold'>Vous êtes professionel du bâtiment et vous recherchez de nouveaux chantiers ?</h2>
-                        <p className='text-center text-xs mt-5'>Saisisez vos coordonnées et je vous contacterais afin que nous étudions votre projet</p>
-                        <div className='md:w-9/12 mx-auto mt-8'>
+                        <h2 className='text-center text-textSecondary text-4xl font-bold'>Nous contacter</h2>
+                        <p className='text-center text-xs mt-5'>Laissez-nous un message, nous vous recontactons sous 24h.</p>
+                        <p className='text-center text-xs mt-3'>Pour planifier directement un appel cliquez <a href="#" className='text-yellow underline text-base'>ici</a>.</p>
+                        <div className='md:w-11/12 mx-auto mt-8'>
                             <input 
                             type="text" 
                             name="fullname"
@@ -52,7 +66,7 @@ const Hero = () => {
                             onChange={(e) => setValue({ ...value, name: e.target.value })} 
                             className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
                         />
-                            <div className='flex justify-between w-[100%] mt-4'>
+                            <div className='flex justify-between w-[100%]'>
                                 <input 
                             type="email" 
                             name="email" 
@@ -86,12 +100,11 @@ const Hero = () => {
                             onChange={(e) => setValue({ ...value, codePostal: e.target.value })} 
                             className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
                         />
-                        <input 
-                            type="text" 
-                            name="metierPrincipal" 
-                            placeholder="Métier principal" 
-                            value={value.metierPrincipal} 
-                            onChange={(e) => setValue({ ...value, metierPrincipal: e.target.value })} 
+                        <textarea
+                            name="Commentaire"
+                            placeholder="Comment pujis-je vous aider ?"
+                            value={value.commentaire}
+                            onChange={(e) => setValue({ ...value, commentaire: e.target.value })}
                             className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
                         />
                             <div className='flex justify-center'>
