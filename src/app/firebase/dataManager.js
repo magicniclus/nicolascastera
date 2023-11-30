@@ -5,7 +5,7 @@ import { app } from "./firebase.config"; // Assurez-vous d'importer votre instan
 const db = getDatabase(app);
 
 export const addProspect = async (prospectData) => {
-  const prospectsRef = ref(db, "prospects"); // Référence au dossier 'prospects'
+  const prospectsRef = ref(db, "googleads"); // Référence au dossier 'prospects'
 
   try {
     const newProspectRef = push(prospectsRef); // Crée une nouvelle référence avec un ID unique dans 'prospects'
