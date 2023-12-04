@@ -6,7 +6,7 @@ import Analytics from './../components/Analytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Merci | Trouver-Mon-Chantier.fr',
+  title: 'Merci | Nicolas-castera.fr',
   description: "Merci de votre confiance",
 }
 
