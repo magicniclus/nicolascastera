@@ -56,7 +56,7 @@ const Hero = () => {
                     <form onSubmit={handleSubmit} id="form" className='sm:px-7 px-2 py-16 bg-gray rounded-md shadow-md flex flex-col items-center w-full'>
                         <h2 className='text-center text-textSecondary text-4xl font-bold'>Contact</h2>
                         <p className='text-center text-xs mt-5'>Laissez-nous un message, nous vous recontactons sous 24h.</p>
-                        <p className='text-center text-xs mt-3'>Pour planifier directement un appel cliquez <a href="https://calendly.com/nicolascastera-rdv/rendez-vous-decouverte" className='text-yellow underline text-base'>ici</a>.</p>
+                        <p className='text-center text-xs mt-3'>Pour planifier directement un appel cliquez <a href="https://calendly.com/nicolascastera-rdv/rendez-vous-decouverte-gratuit" className='text-yellow underline text-base'>ici</a>.</p>
                         <div className='md:w-11/12 mx-auto mt-8'>
                             <input 
                             type="text" 
