@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 
 const page = () => {
     return (
@@ -15,11 +16,12 @@ const page = () => {
                 </h1>
                 <div className="text-gray-700">
                   <p className="mt-2">
-                    Je vous recontacterais dans les plus brefs délais.
+                    Pour planifier un rendez-vous directement, veuillez choisir votre créneau horaire ci-dessous.
                   </p>
                 </div>
+                <div className="calendly-inline-widget" data-url="https://calendly.com/nicolascastera-rdv/rendez-vous-decouverte-gratuit" style={{ width: '100%', height: '700px', marginTop: "30px" }}></div>
             </main>
-            
+            <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
             <Footer />
         </>
     );
