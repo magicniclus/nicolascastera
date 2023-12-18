@@ -9,10 +9,10 @@ const ServiceLittleBanner = () => {
                         <h2 className='text-2xl font-bold md:mt-0 mt-3'>💶 E-Commerce</h2>
                     </li>
                     <li>
-                        <p className='text-2xl font-bold md:mt-0 mt-3'>💻 Aquisition de lead</p>
+                        <p className='text-2xl font-bold md:mt-0 mt-3'>💻 Acquisition de leads</p>
                     </li>
                     <li>
-                        <p className='text-2xl font-bold md:mt-0 mt-3'>📱 Vente d'application</p>
+                        <p className='text-2xl font-bold md:mt-0 mt-3'>📱 Vente d'applications</p>
                     </li>
                     <li>
                         <p className='text-2xl font-bold md:mt-0 mt-3'>✨ Notoriété</p>
