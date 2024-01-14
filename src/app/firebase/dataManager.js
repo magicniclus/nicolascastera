@@ -1,15 +1,25 @@
 import { ref, push, set, getDatabase } from "firebase/database";
-import { app } from "./firebase.config"; // Assurez-vous d'importer votre instance de base de données Firebase
+import { app } from "./firebase.config";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
-// Obtenez une référence à la base de données de Firebase
 const db = getDatabase(app);
 
 export const addProspect = async (prospectData) => {
-  const prospectsRef = ref(db, "googleads"); // Référence au dossier 'prospects'
+  const prospectsRef = ref(db, "googleads");
 
   try {
-    const newProspectRef = push(prospectsRef); // Crée une nouvelle référence avec un ID unique dans 'prospects'
-    await set(newProspectRef, prospectData); // Sauvegarde les données du prospect avec cet ID unique
+    const newProspectRef = push(prospectsRef);
+
+    // Formattez la date actuelle en format français
+    const currentDate = format(new Date(), "dd/MM/yyyy", { locale: fr });
+
+    const updatedProspectData = {
+      ...prospectData,
+      dateAdded: currentDate, // Ajoutez la date formatée
+    };
+
+    await set(newProspectRef, updatedProspectData);
     console.log(`Added new prospect successfully.`);
   } catch (error) {
     console.error("Failed to add new prospect: ", error);
