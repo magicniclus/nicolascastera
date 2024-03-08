@@ -11,18 +11,26 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "date-fns": "^3.2.0",
+    "embla-carousel-react": "^8.0.0",
     "encoding": "^0.1.13",
     "firebase": "^10.6.0",
     "gsap": "^3.12.2",
+    "lucide-react": "^0.351.0",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-facebook-pixel": "^1.0.4",
     "react-ga": "^3.3.1",
-    "react-gtm-module": "^2.0.11"
+    "react-gtm-module": "^2.0.11",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
