@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import ButtonFixed from "./components/ButtonFixed";
 import CTA from "./components/CTA";
+import Entreprise from "./components/Entreprise";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ImgWithText from "./components/ImgWithText";
 import LogoContainer from "./components/LogoContainer";
 import NavBar from "./components/NavBar";
 import Qui from "./components/Qui";
+import Realisations from "./components/Realisations";
 import ServiceLittleBanner from "./components/ServiceLittleBanner";
 import Temoignage from "./components/Temoignage";
 
@@ -84,6 +86,7 @@ export default function Home() {
         <div ref={formRef}>
           <Hero />
         </div>
+        <Entreprise />
         <ImgWithText
           imgUrl="/img/resultat.png"
           title="Devenez maitre de votre rentabilité"
@@ -119,6 +122,7 @@ export default function Home() {
           <LogoContainer data={googleCards} />
         </div>
         <CTA />
+        <Realisations />
         <Qui />
         <div ref={testimonialRef}>
           <Temoignage />
